@@ -1,6 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
-const Navbar = () => {
+function Navbar() {
     return (
         <div>
             <header>
@@ -24,23 +25,28 @@ const Navbar = () => {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page" href="/">
-                                        Home
+                                        <Link to='/'>Home</Link>
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/">
-                                        Link
+                                        <Link to='/projects'>Projects</Link>
                                     </a>
                                 </li>
-                                
+
                                 <li className="nav-item">
                                     <a className="nav-link" href="/">
-                                        Disabled
+                                        <Link to="/qualifications">Qualifications</Link>
                                     </a>
                                 </li>
                             </ul>
                             <div className="d-flex">
-                                <button className="btn btn-outline-primary linkedin" type="submit" onClick={()=>{window.open('https://www.linkedin.com/in/rudrark12')}}>
+                                <button className="btn btn-outline-primary profile-links github" type="submit" onClick={() => { window.open('https://github.com/rudra-rk12') } }>
+                                    Github
+                                </button>
+                            </div>
+                            <div className="d-flex">
+                                <button className="btn btn-outline-primary profile-links linkedin" type="submit" onClick={() => { window.open('https://www.linkedin.com/in/rudrark12') } }>
                                     LinkedIn
                                 </button>
                             </div>
